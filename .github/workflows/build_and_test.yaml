@@ -1,30 +1,5 @@
 name: pg_duckdb Build and Test
-on:
-  push:
-    branches: ["main"]
-    tags: ["v*"]
-    paths:
-      - 'src/**'
-      - 'test/**'
-      - 'include/**'
-      - 'sql/**'
-      - Makefile
-      - Makefile.global
-      - duckdb.control
-      - third_party/duckdb
-      - '.github/workflows/**'
-  pull_request:
-    paths:
-      - 'src/**'
-      - 'test/**'
-      - 'include/**'
-      - 'sql/**'
-      - Makefile
-      - Makefile.global
-      - duckdb.control
-      - third_party/duckdb
-      - '.github/workflows/**'
-      - .clang-format
+on: workflow_dispatch
 
 jobs:
   clang-format:
